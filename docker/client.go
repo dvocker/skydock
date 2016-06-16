@@ -53,6 +53,8 @@ type (
 	// - exitedor;
 	// - dead;
 	State string
+	
+	func (it State) IsRunning() bool { return it == "running" }
 
 	Container struct {
 		Id              string
